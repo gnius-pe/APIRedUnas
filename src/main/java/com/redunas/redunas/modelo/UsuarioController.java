@@ -8,7 +8,7 @@ import lombok.Setter;
 @Setter
 @Entity
 @Table(name = "Usuario")
-public class Usuario {
+public class UsuarioController {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,6 +17,8 @@ public class Usuario {
 
     @Column(name = "nombre_usuario", unique = true, length = 30)
     private String nombreUsuario;
+    @Column(name = "pasword", unique = true, length = 50)
+    private String pasword;
 
     @Column(name = "rol_usuario", length = 30)
     private String rolUsuario;
