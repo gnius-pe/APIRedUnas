@@ -16,12 +16,7 @@ public class UsuarioDetalleControlador {
     @Autowired
     UsuarioDetalleServicio usuarioServicio;
 
-    @GetMapping("/HolaMundo")
-    public String holaMundo(){
-        return "Hola desde el back-end";
-    }
-
-    @GetMapping("/todos")
+    @GetMapping("/all")
     public List<UsuarioDetalle> obtenerTotodUsuario(){
         return usuarioServicio.obtenerTodoUsuario();
     }
