@@ -32,9 +32,6 @@ public class UsuarioDetalle {
     @Column(length = 10)
     private String codigo;
 
-    @Column(length = 50)
-    private String correo;
-
     @Column(name = "numero_celular", length = 9)
     private String numeroCelular;
 
