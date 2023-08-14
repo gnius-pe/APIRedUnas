@@ -16,7 +16,10 @@ public class Sesion {
     private SesionServicio sesionServicio;
 
 
-
+    /*
+    agregar el CORS, para los local host de front :
+    ejemplo @CrossOrigin(origins = "http://localhost:5173")
+     */
     @GetMapping("/login/{correo}")
     public ResponseEntity<?> iniciarSesion(@PathVariable String correo){
         Usuario usuario = sesionServicio.buscarUsuarioPorCorreo(correo);
