@@ -28,21 +28,25 @@ public class Inicio {
     @Autowired
     private UsuarioServicio usuarioServicio;
 
+    @CrossOrigin(origins = {"http://localhost:5173"})
     @GetMapping("/publicaciones")
     public List<Publicacion> publicaciones() {
         return publicacionServicio.publicaciones();
     }
 
+    @CrossOrigin(origins = {"http://localhost:5173"})
     @GetMapping("/publicaciones-inicio")
     public List<PulicacionInicio> publicacionInicio(){
         return publicacionServicio.publicacionesInicio();
     }
 
+    @CrossOrigin(origins = {"http://localhost:5173"})
     @GetMapping("/usuario-publicacion")
     public List<UsuarioPublicacion> todoUsuarioPublicacion (){
         return publicacionServicio.todosUsuarioPublicacion();
     }
 
+    @CrossOrigin(origins = {"http://localhost:5173"})
     @PostMapping("/publicar")
     public ResponseEntity<PulicacionInicio> crearPublicacion(@RequestBody Publicar publicar){
         if(new ManejoCadena().esTextoValido(publicar.getDescripcion())){
