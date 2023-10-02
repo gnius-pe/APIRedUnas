@@ -1,5 +1,6 @@
 package com.redunas.redunas.controlador;
 
+import com.redunas.redunas.modelo.DTO.UsuarioRegistro;
 import com.redunas.redunas.modelo.Usuario;
 import com.redunas.redunas.servicio.SesionServicio;
 import com.redunas.redunas.utilidades.ProblemaDetalle;
@@ -33,5 +34,12 @@ public class Sesion {
             ProblemaDetalle problemaDetalle =  new ProblemaDetalle(statusCode,mensajeTitulo,mensajeDetalle);
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(problemaDetalle);
         }
+    }
+
+    @PostMapping("/registro")
+    public ResponseEntity<?> registroNuevoUsuario(@RequestBody UsuarioRegistro usuarioRegistro){
+        System.out.println(usuarioRegistro.toString());
+
+        return ResponseEntity.ok("Estado de registro en progreso");
     }
 }
