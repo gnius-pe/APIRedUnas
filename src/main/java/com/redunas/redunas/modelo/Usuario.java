@@ -32,5 +32,4 @@ public class Usuario {
     @ManyToOne
     @JoinColumn(name = "id_usuario_detalle", referencedColumnName = "id_usuario_detalle",insertable = false,updatable = false)
     private UsuarioDetalle usuarioDetalle;
-    // Constructor, getters, setters, y otros métodos si es necesario
 }
