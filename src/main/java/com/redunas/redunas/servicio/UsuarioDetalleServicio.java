@@ -15,4 +15,13 @@ public class UsuarioDetalleServicio {
     public List<UsuarioDetalle> obtenerTodoUsuario(){
         return usuarioRepositorio.findAll();
     }
+
+    public UsuarioDetalle guardarUsuarioDetalle( UsuarioDetalle usuarioDetalle ){
+        return usuarioRepositorio.save(usuarioDetalle);
+    }
+
+    public UsuarioDetalle buscarPorCOdigo(String codigo){
+
+        return usuarioRepositorio.existsUsuarioDetalleByCodigo(codigo);
+    }
 }
